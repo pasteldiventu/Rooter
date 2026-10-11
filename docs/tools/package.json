@@ -1,0 +1,13 @@
+{
+  "name": "rooter-docs-tools",
+  "private": true,
+  "type": "module",
+  "description": "Gera docs/DOCUMENTACAO_ROOTER.pdf a partir do Markdown",
+  "scripts": {
+    "pdf": "node gerar-pdf.mjs"
+  },
+  "dependencies": {
+    "marked": "^18.0.0",
+    "puppeteer-core": "^24.0.0"
+  }
+}

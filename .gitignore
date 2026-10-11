@@ -12,3 +12,7 @@ mobile/.dart_tool/
 mobile/build/
 mobile/.flutter-plugins
 mobile/.flutter-plugins-dependencies
+
+# Docs
+docs/tools/node_modules/
+docs/tools/package-lock.json

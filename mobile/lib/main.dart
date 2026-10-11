@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'screens/areas_page.dart';
 import 'services/api_service.dart';
@@ -19,7 +20,11 @@ class RooterApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rooter — Mato Grosso',
       debugShowCheckedModeBanner: false,
-      theme: RotaryTheme.light(),
+      theme: RotaryTheme.dark(),
+      builder: (context, child) => AnnotatedRegion<SystemUiOverlayStyle>(
+        value: RotaryTheme.overlayStyle,
+        child: child!,
+      ),
       home: AreasPage(api: api),
     );
   }
