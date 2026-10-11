@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/rotary_theme.dart';
@@ -229,58 +228,6 @@ class Overline extends StatelessWidget {
     return Text(
       text.toUpperCase(),
       style: Theme.of(context).textTheme.labelSmall?.copyWith(color: color),
-    );
-  }
-}
-
-class OfflineBanner extends StatelessWidget {
-  const OfflineBanner({super.key, required this.listenable});
-
-  final ValueListenable<bool> listenable;
-
-  @override
-  Widget build(BuildContext context) {
-    return ValueListenableBuilder<bool>(
-      valueListenable: listenable,
-      builder: (context, offline, _) {
-        return AnimatedSize(
-          duration: const Duration(milliseconds: 250),
-          child: !offline
-              ? const SizedBox(width: double.infinity)
-              : Container(
-                  width: double.infinity,
-                  margin: const EdgeInsets.only(bottom: 16),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 14,
-                    vertical: 12,
-                  ),
-                  decoration: BoxDecoration(
-                    color: RotaryTheme.gold.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                      color: RotaryTheme.gold.withValues(alpha: 0.35),
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.cloud_off_rounded,
-                        color: RotaryTheme.gold,
-                        size: 20,
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          'Modo demonstração: API indisponível — usando dados locais.',
-                          style: Theme.of(context).textTheme.bodySmall
-                              ?.copyWith(color: RotaryTheme.textPrimary),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-        );
-      },
     );
   }
 }

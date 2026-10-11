@@ -98,7 +98,6 @@ class _ClubsPageState extends State<ClubsPage> {
                     ),
                   ],
                   const SizedBox(height: 20),
-                  OfflineBanner(listenable: widget.api.usingOfflineData),
                 ],
               ),
             );

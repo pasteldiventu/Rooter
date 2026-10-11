@@ -199,7 +199,6 @@ class _AreasContent extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 24),
-                  OfflineBanner(listenable: api.usingOfflineData),
                   _HeroCard(areaCount: areas.length),
                   const SizedBox(height: 28),
                   SectionHeader(
