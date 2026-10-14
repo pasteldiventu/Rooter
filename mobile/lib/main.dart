@@ -18,7 +18,7 @@ class RooterApp extends StatelessWidget {
     final api = ApiService();
 
     return MaterialApp(
-      title: 'Rooter — Mato Grosso',
+      title: 'Distrito 4440',
       debugShowCheckedModeBanner: false,
       theme: RotaryTheme.dark(),
       builder: (context, child) => AnnotatedRegion<SystemUiOverlayStyle>(

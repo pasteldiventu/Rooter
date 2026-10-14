@@ -1,11 +1,11 @@
 {
-    "name": "rooter_mobile",
-    "short_name": "rooter_mobile",
+    "name": "Distrito 4440",
+    "short_name": "Distrito 4440",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#17458F",
+    "theme_color": "#17458F",
+    "description": "Clubes Rotary do Distrito 4440 — Mato Grosso.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

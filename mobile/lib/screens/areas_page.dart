@@ -99,7 +99,7 @@ class _BrandedLoading extends StatelessWidget {
               child: const RotaryLogo(size: 112, radius: 32),
             ),
             const SizedBox(height: 4),
-            Text('Rooter', style: theme.textTheme.headlineMedium),
+            Text('Distrito 4440', style: theme.textTheme.headlineMedium),
             const SizedBox(height: 6),
             Text(
               'Mato Grosso',
@@ -170,7 +170,10 @@ class _AreasContent extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Rooter', style: theme.textTheme.titleLarge),
+                            Text(
+                              'Distrito 4440',
+                              style: theme.textTheme.titleLarge,
+                            ),
                             Text(
                               'Mato Grosso',
                               style: theme.textTheme.bodySmall?.copyWith(
