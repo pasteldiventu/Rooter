@@ -38,7 +38,9 @@ def list_clubs_by_area(area_id: str) -> list[ClubSummary]:
         raise HTTPException(status_code=404, detail="Área não encontrada")
 
     return [
-        ClubSummary(id=c["id"], area_id=c["area_id"], name=c["name"])
+        ClubSummary(
+            id=c["id"], area_id=c["area_id"], name=c["name"], logo=c.get("logo")
+        )
         for c in data["clubs"]
         if c["area_id"] == area_id
     ]

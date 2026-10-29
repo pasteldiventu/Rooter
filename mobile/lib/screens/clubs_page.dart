@@ -84,10 +84,7 @@ class _ClubsPageState extends State<ClubsPage> {
                   const SizedBox(height: 20),
                   const Overline('Clubes da área'),
                   const SizedBox(height: 6),
-                  Text(
-                    widget.area.name,
-                    style: theme.textTheme.headlineMedium,
-                  ),
+                  Text(widget.area.name, style: theme.textTheme.headlineMedium),
                   if (governor != null && governor.trim().isNotEmpty) ...[
                     const SizedBox(height: 6),
                     Text(
@@ -143,6 +140,7 @@ class _ClubsPageState extends State<ClubsPage> {
                               api: widget.api,
                               clubId: club.id,
                               clubName: club.name,
+                              clubLogo: club.logoAsset,
                             ),
                           ),
                         );

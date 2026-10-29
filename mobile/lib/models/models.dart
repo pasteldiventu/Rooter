@@ -21,22 +21,30 @@ class Area {
   }
 }
 
+String? _logoAsset(Object? logo) {
+  if (logo is! String || logo.trim().isEmpty) return null;
+  return 'assets/images/clubs/${logo.trim()}';
+}
+
 class ClubSummary {
   const ClubSummary({
     required this.id,
     required this.areaId,
     required this.name,
+    this.logoAsset,
   });
 
   final String id;
   final String areaId;
   final String name;
+  final String? logoAsset;
 
   factory ClubSummary.fromJson(Map<String, dynamic> json) {
     return ClubSummary(
       id: json['id'] as String,
       areaId: json['area_id'] as String,
       name: json['name'] as String,
+      logoAsset: _logoAsset(json['logo']),
     );
   }
 }
@@ -53,6 +61,7 @@ class ClubDetail {
     this.latitude,
     this.longitude,
     this.meetingSchedule,
+    this.logoAsset,
   });
 
   final String id;
@@ -65,6 +74,7 @@ class ClubDetail {
   final double? latitude;
   final double? longitude;
   final String? meetingSchedule;
+  final String? logoAsset;
 
   bool get hasLocation =>
       (address != null && address!.trim().isNotEmpty) ||
@@ -85,6 +95,7 @@ class ClubDetail {
       latitude: (json['latitude'] as num?)?.toDouble(),
       longitude: (json['longitude'] as num?)?.toDouble(),
       meetingSchedule: json['meeting_schedule'] as String?,
+      logoAsset: _logoAsset(json['logo']),
     );
   }
 }

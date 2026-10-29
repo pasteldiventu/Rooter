@@ -12,6 +12,7 @@ class ClubSummary(BaseModel):
     id: str
     area_id: str
     name: str
+    logo: str | None = None
 
 
 class ClubDetail(BaseModel):
@@ -25,3 +26,4 @@ class ClubDetail(BaseModel):
     latitude: float | None = None
     longitude: float | None = None
     meeting_schedule: str | None = None
+    logo: str | None = None

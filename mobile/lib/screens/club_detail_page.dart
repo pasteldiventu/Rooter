@@ -12,11 +12,13 @@ class ClubDetailPage extends StatefulWidget {
     required this.api,
     required this.clubId,
     required this.clubName,
+    this.clubLogo,
   });
 
   final ApiService api;
   final String clubId;
   final String clubName;
+  final String? clubLogo;
 
   @override
   State<ClubDetailPage> createState() => _ClubDetailPageState();
@@ -64,9 +66,9 @@ class _ClubDetailPageState extends State<ClubDetailPage> {
   Future<void> _launch(Uri uri, String errorMessage) async {
     final ok = await launchUrl(uri);
     if (!ok && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(errorMessage)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(errorMessage)));
     }
   }
 
@@ -123,7 +125,11 @@ class _ClubDetailPageState extends State<ClubDetailPage> {
 
           return CustomScrollView(
             slivers: [
-              _HeroAppBar(title: widget.clubName, height: _heroHeight),
+              _HeroAppBar(
+                title: widget.clubName,
+                logoAsset: snapshot.data?.logoAsset ?? widget.clubLogo,
+                height: _heroHeight,
+              ),
               content,
             ],
           );
@@ -277,10 +283,15 @@ class _ClubDetailPageState extends State<ClubDetailPage> {
 }
 
 class _HeroAppBar extends StatelessWidget {
-  const _HeroAppBar({required this.title, required this.height});
+  const _HeroAppBar({
+    required this.title,
+    required this.height,
+    this.logoAsset,
+  });
 
   final String title;
   final double height;
+  final String? logoAsset;
 
   @override
   Widget build(BuildContext context) {
@@ -307,9 +318,9 @@ class _HeroAppBar extends StatelessWidget {
           final top = MediaQuery.paddingOf(context).top;
           final minExtent = top + kToolbarHeight;
           final maxExtent = top + height;
-          final expanded = ((constraints.maxHeight - minExtent) /
-                  (maxExtent - minExtent))
-              .clamp(0.0, 1.0);
+          final expanded =
+              ((constraints.maxHeight - minExtent) / (maxExtent - minExtent))
+                  .clamp(0.0, 1.0);
           final heroOpacity = ((expanded - 0.3) / 0.7).clamp(0.0, 1.0);
           final titleOpacity = ((0.45 - expanded) / 0.3).clamp(0.0, 1.0);
 
@@ -335,19 +346,12 @@ class _HeroAppBar extends StatelessWidget {
                       ),
                       Align(
                         alignment: const Alignment(0, 0.35),
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(34),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: 0.35),
-                                blurRadius: 30,
-                                offset: const Offset(0, 12),
-                              ),
-                            ],
-                          ),
-                          child: const RotaryLogo(size: 120, radius: 34),
-                        ),
+                        child: logoAsset == null
+                            ? const _HeroShadow(
+                                radius: 34,
+                                child: RotaryLogo(size: 120, radius: 34),
+                              )
+                            : _ClubLogoCard(asset: logoAsset!),
                       ),
                     ],
                   ),
@@ -373,6 +377,66 @@ class _HeroAppBar extends StatelessWidget {
             ],
           );
         },
+      ),
+    );
+  }
+}
+
+class _HeroShadow extends StatelessWidget {
+  const _HeroShadow({required this.radius, required this.child});
+
+  final double radius;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(radius),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.35),
+            blurRadius: 30,
+            offset: const Offset(0, 12),
+          ),
+        ],
+      ),
+      child: child,
+    );
+  }
+}
+
+/// Assinatura oficial do clube (azul sobre fundo claro), em cartão branco.
+class _ClubLogoCard extends StatelessWidget {
+  const _ClubLogoCard({required this.asset});
+
+  final String asset;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 440),
+        child: _HeroShadow(
+          radius: 24,
+          child: Container(
+            height: 112,
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(24),
+            ),
+            child: Image.asset(
+              asset,
+              fit: BoxFit.contain,
+              filterQuality: FilterQuality.medium,
+              errorBuilder: (_, _, _) =>
+                  const Center(child: RotaryLogo(size: 64, radius: 18)),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -404,8 +468,8 @@ class _QuickAction extends StatelessWidget {
                 Text(
                   label,
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: RotaryTheme.textPrimary,
-                      ),
+                    color: RotaryTheme.textPrimary,
+                  ),
                 ),
               ],
             ),

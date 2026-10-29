@@ -27,6 +27,19 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 Dados em `backend/data/clubs.json` (planilha de presidentes + clube fictício **Teste Funcionamento** com endereço do Instituto de Computação da UFMT).
 
+Para atualizar com uma nova planilha de presidentes (atualiza também `mobile/assets/data/clubs.json`, mantendo endereços e coordenadas já cadastrados):
+
+```bash
+pip install openpyxl
+python backend/scripts/importar_planilha.py "listagem de presidentes.xlsx"
+```
+
+Logos dos clubes: os PDFs oficiais ficam em `docs/logos/Rotary Logos_PDF/`. Para gerar os PNGs em `mobile/assets/images/clubs/` e associá-los aos clubes (requer `poppler-utils` e ImageMagick):
+
+```bash
+python backend/scripts/importar_logos.py
+```
+
 ## Mobile
 
 ```bash
