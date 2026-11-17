@@ -75,9 +75,6 @@ EMAIL_FIXES = {
 
 LOWERCASE_WORDS = {"da", "de", "do", "das", "dos", "e"}
 
-TEST_CLUB_ID = "area-01-teste-funcionamento"
-
-
 def clean(value) -> str | None:
     if value is None:
         return None
@@ -205,10 +202,16 @@ def main() -> None:
     areas, rows = read_sheet(Path(sys.argv[1]))
 
     previous = json.loads(BACKEND_JSON.read_text(encoding="utf-8"))
-    legacy = {key(c["name"]): c for c in previous["clubs"]}
-    test_club = next((c for c in previous["clubs"] if c["id"] == TEST_CLUB_ID), None)
+    legacy = {
+        key(c["name"]): c
+        for c in previous["clubs"]
+        if c.get("area_id") != "equipe-distrital"
+    }
+    # Mantém a Equipe Distrital se já estiver no JSON.
+    team_areas = [a for a in previous.get("areas", []) if a.get("id") == "equipe-distrital"]
+    team_clubs = [c for c in previous["clubs"] if c.get("area_id") == "equipe-distrital"]
 
-    clubs = [test_club] if test_club else []
+    clubs: list[dict] = []
     used, missing = set(), []
     for row in rows:
         k = key(row["name"])
@@ -239,8 +242,8 @@ def main() -> None:
         "district": "Distrito 4440 — Mato Grosso",
         "state": previous.get("state", "MT"),
         "scope": previous.get("scope", "Somente clubes do estado de Mato Grosso"),
-        "areas": areas,
-        "clubs": clubs,
+        "areas": team_areas + areas,
+        "clubs": clubs + team_clubs,
     }
     BACKEND_JSON.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -250,7 +253,7 @@ def main() -> None:
     removed = [
         c["name"]
         for c in previous["clubs"]
-        if c["id"] not in used and c["id"] != TEST_CLUB_ID
+        if c.get("area_id") != "equipe-distrital" and c["id"] not in used
     ]
     print(f"{len(areas)} áreas, {len(rows)} clubes da planilha gravados.")
     print("Clubes novos (sem endereço anterior):", ", ".join(missing) or "nenhum")

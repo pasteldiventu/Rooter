@@ -50,8 +50,15 @@ def club_name_in_pdf(path: Path) -> str | None:
         text=True,
         check=True,
     ).stdout
-    match = re.search(r"rotary club de (.+?)\s*,\s*4440", text, flags=re.I | re.S)
-    return re.sub(r"\s+", " ", match.group(1)).strip() if match else None
+    # Lotes novos às vezes omitem ", 4440" no texto embutido.
+    match = re.search(
+        r"rotary club de (.+?)(?:\s*,\s*4440)?\s*$",
+        text.strip(),
+        flags=re.I | re.S,
+    )
+    if not match:
+        return None
+    return re.sub(r"\s+", " ", match.group(1)).strip(" ,")
 
 
 def render_png(pdf: Path, target: Path) -> None:

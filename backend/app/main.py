@@ -37,13 +37,22 @@ def list_clubs_by_area(area_id: str) -> list[ClubSummary]:
     if area_id not in area_ids:
         raise HTTPException(status_code=404, detail="Área não encontrada")
 
-    return [
-        ClubSummary(
-            id=c["id"], area_id=c["area_id"], name=c["name"], logo=c.get("logo")
+    result = []
+    for c in data["clubs"]:
+        if c["area_id"] != area_id:
+            continue
+        members = c.get("members") or []
+        result.append(
+            ClubSummary(
+                id=c["id"],
+                area_id=c["area_id"],
+                name=c["name"],
+                logo=c.get("logo"),
+                kind=c.get("kind"),
+                member_count=len(members) if members else None,
+            )
         )
-        for c in data["clubs"]
-        if c["area_id"] == area_id
-    ]
+    return result
 
 
 @app.get("/clubs/{club_id}", response_model=ClubDetail)

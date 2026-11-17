@@ -2,14 +2,14 @@
 
 App facilitador para localizar clubes Rotary **somente no estado de Mato Grosso**: escolher a **Área**, ver contatos do presidente, horário de reunião (quando disponível) e abrir o endereço no Google Maps.
 
-Stack: **Flutter** (mobile) + **FastAPI** (API) + **Shorebird** (updates OTA).
+Stack: **Flutter** (mobile + web) + **FastAPI** (API) + **Shorebird** (updates OTA).
 
 ## Estrutura
 
 ```
 Rooter/
   backend/   # FastAPI + dados mock (JSON)
-  mobile/    # App Flutter
+  mobile/    # App Flutter (Android, iOS e Web)
 ```
 
 ## Backend
@@ -25,7 +25,7 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 - Health: http://127.0.0.1:8000/health
 - Docs: http://127.0.0.1:8000/docs
 
-Dados em `backend/data/clubs.json` (planilha de presidentes + clube fictício **Teste Funcionamento** com endereço do Instituto de Computação da UFMT).
+Dados em `backend/data/clubs.json` (planilha de presidentes + Equipe Distrital).
 
 Para atualizar com uma nova planilha de presidentes (atualiza também `mobile/assets/data/clubs.json`, mantendo endereços e coordenadas já cadastrados):
 
@@ -38,6 +38,12 @@ Logos dos clubes: os PDFs oficiais ficam em `docs/logos/Rotary Logos_PDF/`. Para
 
 ```bash
 python backend/scripts/importar_logos.py
+```
+
+Equipe Distrital (cria a área especial e as funções/comissões a partir da planilha oficial):
+
+```bash
+python backend/scripts/importar_equipe_distrital.py "Equipe_Distrital.xlsx"
 ```
 
 ## Mobile
@@ -71,6 +77,26 @@ flutter run --dart-define=API_BASE_URL=http://192.168.1.10:8000
 Fluxo: **Áreas → Clubes → Detalhe** (contato, reunião se houver, endereço → Google Maps).
 
 Se a API não responder (timeout ~3s ou erro de rede), o app usa automaticamente o JSON embutido (`assets/data/clubs.json`) e mostra um banner **Modo demonstração**. Assim o APK funciona sozinho para apresentação.
+
+## Web
+
+O mesmo app Flutter roda no navegador (dados locais embutidos; não depende do backend).
+
+```bash
+cd mobile
+flutter pub get
+
+# Desenvolvimento (abre no Chromium / Chrome)
+flutter run -d web-server --web-hostname 0.0.0.0 --web-port 4173
+# ou, com Chrome instalado:
+# flutter run -d chrome
+
+# Build de produção (saída em build/web)
+flutter build web --release
+python3 -m http.server 4173 --directory build/web
+```
+
+Abra http://127.0.0.1:4173 no navegador. Em telas largas o layout fica centralizado (máx. 720px).
 
 ## Shorebird (OTA)
 

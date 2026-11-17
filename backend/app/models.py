@@ -6,6 +6,7 @@ class Area(BaseModel):
     name: str
     number: int
     assistant_governor: str | None = None
+    kind: str | None = None
 
 
 class ClubSummary(BaseModel):
@@ -13,6 +14,16 @@ class ClubSummary(BaseModel):
     area_id: str
     name: str
     logo: str | None = None
+    kind: str | None = None
+    member_count: int | None = None
+
+
+class TeamMember(BaseModel):
+    role: str
+    name: str
+    phone: str | None = None
+    email: str | None = None
+    club: str | None = None
 
 
 class ClubDetail(BaseModel):
@@ -27,3 +38,5 @@ class ClubDetail(BaseModel):
     longitude: float | None = None
     meeting_schedule: str | None = None
     logo: str | None = None
+    kind: str | None = None
+    members: list[TeamMember] | None = None

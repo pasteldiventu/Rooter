@@ -4,6 +4,13 @@
   "scope": "Somente clubes do estado de Mato Grosso",
   "areas": [
     {
+      "id": "equipe-distrital",
+      "name": "Equipe Distrital",
+      "number": 0,
+      "assistant_governor": "Distrito 4440 — 2026-27",
+      "kind": "district_team"
+    },
+    {
       "id": "area-01",
       "name": "Área 01",
       "number": 1,
@@ -49,7 +56,7 @@
       "id": "area-08",
       "name": "Área 08",
       "number": 8,
-      "assistant_governor": "Susana"
+      "assistant_governor": "Susana Cristina Pagnan Vieira"
     },
     {
       "id": "area-09",
@@ -71,19 +78,6 @@
     }
   ],
   "clubs": [
-    {
-      "id": "area-01-teste-funcionamento",
-      "area_id": "area-01",
-      "name": "Teste Funcionamento",
-      "president_name": "Presidente Teste",
-      "president_phone": "65 99999-0000",
-      "president_email": "teste@rotary.local",
-      "address": "Av. Fernando Corrêa da Costa, nº 2367, Boa Esperança, Cuiabá – MT, 78068-600 (Instituto de Computação – UFMT)",
-      "latitude": -15.6088,
-      "longitude": -56.0645,
-      "meeting_schedule": "Terças, 19h30",
-      "logo": null
-    },
     {
       "id": "area-01-chapada-dos-guimaraes",
       "area_id": "area-01",
@@ -251,7 +245,7 @@
       "latitude": -17.208265,
       "longitude": -54.146586,
       "meeting_schedule": null,
-      "logo": null
+      "logo": "itiquira.png"
     },
     {
       "id": "area-02-pedra-preta",
@@ -348,9 +342,9 @@
       "id": "area-02-rondonopolis-rosa-bororo",
       "area_id": "area-02",
       "name": "Rondonópolis-Rosa Bororo",
-      "president_name": "Lenice de Almeida",
-      "president_phone": "66 9 9696-4957",
-      "president_email": "drlenice@hotmail.com",
+      "president_name": "Adão Domingues de Souza",
+      "president_phone": "66 9 9984-9793",
+      "president_email": "adaodomingueseng@gmail.com",
       "address": null,
       "latitude": null,
       "longitude": null,
@@ -1125,12 +1119,12 @@
       "logo": null
     },
     {
-      "id": "area-10-tapurah",
+      "id": "area-10-tapurah-arinos",
       "area_id": "area-10",
-      "name": "Tapurah",
-      "president_name": "Atilio Neves de Jesus",
-      "president_phone": "66 9 9997-2363",
-      "president_email": "atilionj@yahoo.com.br",
+      "name": "Tapurah Arinos",
+      "president_name": "Flavio Augusto Zottis",
+      "president_phone": "66 9 9909-6643",
+      "president_email": "flaviozottis@hotmail.com",
       "address": "Câmara Municipal de Vereadores de Tapurah, Tapurah – MT",
       "latitude": -12.742385,
       "longitude": -56.512037,
@@ -1292,6 +1286,1617 @@
       "longitude": -58.757021,
       "meeting_schedule": null,
       "logo": "juina.png"
+    },
+    {
+      "id": "equipe-distrital-governadoria",
+      "area_id": "equipe-distrital",
+      "name": "Governadoria",
+      "kind": "district_team",
+      "president_name": "Gov. Joelcirney Santos Klimaschewsk",
+      "president_phone": "65 9 9994-4246",
+      "president_email": "joel@a2eventoseprojetos.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Governador Distrital 2026-27",
+          "name": "Gov. Joelcirney Santos Klimaschewsk",
+          "phone": "65 9 9994-4246",
+          "email": "joel@a2eventoseprojetos.com.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Vice-Governador Distrital",
+          "name": "Gov. Jânio Sidney Bonfochi",
+          "phone": "65 9 9989-3132",
+          "email": "janiosibo@hotmail.com",
+          "club": "Rotary Club de Mirassol D'Oeste"
+        },
+        {
+          "role": "Governador Eleito(a) 2027-28",
+          "name": "Gov. Carlito Oliveira Santos",
+          "phone": "65 9 9918-2933",
+          "email": "carlitooliveiras@hotmail.com",
+          "club": "Rotary Club de Tangará da Serra-Cidade Alta"
+        },
+        {
+          "role": "Governador Indicado(a) 2028-29",
+          "name": "Gov. Márcio Rogério Albieri",
+          "phone": "65 9683-8073",
+          "email": "marcioalbieri.adv@gmail.com",
+          "club": "Rotary Club de Lucas do Rio Verde"
+        },
+        {
+          "role": "RDR – Representante Distrital de Rotaract",
+          "name": "Marcela Beatriz Silva Ferreira",
+          "phone": "66 9 9624-3746",
+          "email": "mar.bferreira@outlook.com",
+          "club": "Rotaract Club de Sorriso"
+        },
+        {
+          "role": "RDI – Representante Distrital de Interact",
+          "name": "Vitória dos Santos Canton",
+          "phone": "65 9 9630-9576",
+          "email": "vdossantoscanton@gmail.com",
+          "club": "Interact Clubde Tangará da Serra"
+        },
+        {
+          "role": "Coordenadoria Distrital das Associações CASA DA AMIZADE",
+          "name": "Regina Célia Ferreira de Paula",
+          "phone": "65 9 9981-9060",
+          "email": "reginapaula2@gmail.com",
+          "club": "Associação Casa da Amizade de Cuiabá CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-conselho-consultivo",
+      "area_id": "equipe-distrital",
+      "name": "Conselho Consultivo",
+      "kind": "district_team",
+      "president_name": "Vicente Herculano da Silva",
+      "president_phone": "65 9 9982-0578",
+      "president_email": "vicente.herculano.silva@bol.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Ex-Governador (1990-91 e 92-93)",
+          "name": "Vicente Herculano da Silva",
+          "phone": "65 9 9982-0578",
+          "email": "vicente.herculano.silva@bol.com.br",
+          "club": "RC de Cuiabá CPA"
+        },
+        {
+          "role": "Ex-Governador (1991-92)",
+          "name": "Clóvis Batista da Silva",
+          "phone": "65 9 9987-1007",
+          "email": "cloviselepar@terra.com.br",
+          "club": "RC de Tangará da Serra"
+        },
+        {
+          "role": "Ex-Governador (1995-96)",
+          "name": "Renato Roberto Freire Rostey",
+          "phone": "65 9 9989-1237",
+          "email": "renatorfrostey@gmail.com",
+          "club": "RC de Cáceres"
+        },
+        {
+          "role": "Ex-Governador (2002-03)",
+          "name": "Vera Lúcia Cintra Zago",
+          "phone": "65 9 8124-5043",
+          "email": "veraluciacintrazago@gmail.com",
+          "club": "RC de Cuiabá Taiamã"
+        },
+        {
+          "role": "Ex-Governador (2003-04)",
+          "name": "Ascânio Baptista de Carvalho",
+          "phone": "66 9 9985-2045",
+          "email": "ascaniobc@hotmail.com",
+          "club": "RC de Sinop-Tarumã"
+        },
+        {
+          "role": "Ex-Governador (2004-05)",
+          "name": "Reinaldo João Della Pasqua",
+          "phone": "65 9 9982-3448",
+          "email": "depasqua1821@gmail.com",
+          "club": "RC de Várzea Grande Centro"
+        },
+        {
+          "role": "Ex-Governador (2006-07)",
+          "name": "Adão Alonço dos Reis",
+          "phone": "65 9 9971-1950",
+          "email": "adaoreis@terra.com.br",
+          "club": "RC de Várzea Grande Centro"
+        },
+        {
+          "role": "Ex-Governador (2007-08)",
+          "name": "Nildo Lima Queiroz",
+          "phone": "65 9 9987-1055",
+          "email": "nossatga@gmail.com",
+          "club": "RC de Sorriso"
+        },
+        {
+          "role": "Ex-Governador (2008-09)",
+          "name": "Domingos Aparecido Marques",
+          "phone": "65 9 9989-3006",
+          "email": "domingos@grupomarques.com.br",
+          "club": "RC de Mirassol D'Oeste"
+        },
+        {
+          "role": "Ex-Governador (2010-11)",
+          "name": "Serafim Carvalho Melo",
+          "phone": "65 9 8112-6655",
+          "email": "serafimcmelo@gmail.com",
+          "club": "RC de Cuiabá"
+        },
+        {
+          "role": "Ex-Governador (2011-12)",
+          "name": "João Mário Silva Maldonado",
+          "phone": "65 9 9945-6330",
+          "email": "advmaldonado@hotmail.com",
+          "club": "RC de Cáceres Pantanal"
+        },
+        {
+          "role": "Ex-Governador (2012-13)",
+          "name": "Antônio José Zago",
+          "phone": "65 9 8121-4511",
+          "email": "antoniojzago@gmail.com",
+          "club": "RC de Cuiabá Oeste"
+        },
+        {
+          "role": "Ex-Governador (2013-14)",
+          "name": "José Eustáquio da Silva",
+          "phone": "65 9 9981-5507",
+          "email": "araguaiavip2008@gmail.com",
+          "club": "RC de Cuiabá Taiamã"
+        },
+        {
+          "role": "Ex-Governador (2014-15)",
+          "name": "Carlos Antônio Garcete Ribeiro",
+          "phone": "65 9 9293-5203",
+          "email": "mcbdobrasil@gmail.com",
+          "club": "RC de Várzea Grande Centro"
+        },
+        {
+          "role": "Ex-Governador (2017-18)",
+          "name": "Fernando Cesar Dalmolin",
+          "phone": "65 9 8132-9277",
+          "email": "fernandocesard@hotmail.com",
+          "club": "RC de Cuiabá"
+        },
+        {
+          "role": "Ex-Governador (2018-19)",
+          "name": "Marly de Fátima Ferreira",
+          "phone": "65 9 9967-9173",
+          "email": "marlyfat@gmail.com",
+          "club": "RC de Cáceres"
+        },
+        {
+          "role": "Ex-Governador (2019-20)",
+          "name": "Washington Calado Barbosa",
+          "phone": null,
+          "email": null,
+          "club": "RC de Cáceres"
+        },
+        {
+          "role": "Ex-Governador (2020-21)",
+          "name": "Brígida Maria Fischer",
+          "phone": "65 9 9987-1162",
+          "email": "brimafi@hotmail.com",
+          "club": "RC de Tangará da Serra Águas do Sepotuba"
+        },
+        {
+          "role": "Ex-Governador (2021-22)",
+          "name": "Zozoel de Paula",
+          "phone": "65 9 9954-4214",
+          "email": "zozoel@gmail.com",
+          "club": "RC de Cuiabá CPA"
+        },
+        {
+          "role": "Ex-Governador (2022-23)",
+          "name": "Felício Jose dos Santos",
+          "phone": "66 9 9611-6050",
+          "email": "feliciojose-adv@hotmail.com",
+          "club": "RC de Sinop-Tarumã"
+        },
+        {
+          "role": "Ex-Governador (2023-24)",
+          "name": "Janio Sidney Bongochi",
+          "phone": "65 9 9989-3132",
+          "email": "janiosibo@hotmail.com",
+          "club": "RC de Mirassol D´Oeste"
+        },
+        {
+          "role": "Ex-Governador (2024-25)",
+          "name": "Donizeti Aparecido de Souza",
+          "phone": "65 9 9966-7490",
+          "email": "donizeti.ap.rotary@hotmail.com",
+          "club": "RC de Barra do Bugres"
+        },
+        {
+          "role": "Ex-Governador (2025-26)",
+          "name": "Ivonei Gilson Resmini",
+          "phone": "66 9 9910-5638",
+          "email": "ivoneigresmini@hotmail.com",
+          "club": "RC de Rondonópolis Leste"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-governadores-assistentes",
+      "area_id": "equipe-distrital",
+      "name": "Governadores Assistentes",
+      "kind": "district_team",
+      "president_name": "MARGARETH CARVALHO",
+      "president_phone": "65 9 9906-8411",
+      "president_email": "margacarvalho30@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Governador Assistente — Área 1",
+          "name": "MARGARETH CARVALHO",
+          "phone": "65 9 9906-8411",
+          "email": "margacarvalho30@hotmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 2",
+          "name": "Paulo César Coelho Backes",
+          "phone": "66 9 9204-5587",
+          "email": "paulobackes@atacadocentral.com.br",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 3",
+          "name": "Josafat Maciel",
+          "phone": "66 9 9623-0212",
+          "email": "josafat_m_1@hotmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 4",
+          "name": "Paulo Bordin",
+          "phone": "65 9 9989-3380",
+          "email": "paulobordin@viacontabil.com.br",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 5",
+          "name": "João Candido Bruniera",
+          "phone": "65 9 9259-0117",
+          "email": "cbruniera@terra.com.br",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 6",
+          "name": "Jaime Garcia dos Santos",
+          "phone": "66 9 8416-6282",
+          "email": "megainfomt@hotmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 7",
+          "name": "Ukenid da Silva",
+          "phone": "66 9 9978-6673",
+          "email": "ukenidsilva@gmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 8",
+          "name": "Susana Cristina Pagnan Vieira",
+          "phone": "66 9 9985-7426",
+          "email": "susanacrisvieira@gmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 9",
+          "name": "Dimas Peron",
+          "phone": "66 9999-0727",
+          "email": "india.peron@hotmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 10",
+          "name": "Márcio Albieri",
+          "phone": "65 9 9683-8073",
+          "email": "marcioalbieri.adv@gmail.com",
+          "club": null
+        },
+        {
+          "role": "Governador Assistente — Área 11",
+          "name": "Jonas Duarte de Araújo",
+          "phone": "65 9 9971-3676",
+          "email": "jonasaraujo2@hotmail.com",
+          "club": null
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-lider-de-aprendizagem",
+      "area_id": "equipe-distrital",
+      "name": "Líder de Aprendizagem",
+      "kind": "district_team",
+      "president_name": "Gov. Reinaldo João Della Pasqua",
+      "president_phone": "65 9 9982-3448",
+      "president_email": "depasqua1821@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Líder Distrital de Aprendizagem",
+          "name": "Gov. Reinaldo João Della Pasqua",
+          "phone": "65 9 9982-3448",
+          "email": "depasqua1821@gmail.com",
+          "club": "Rotary Club de Várzea Grande Centro"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - PRESIDENTES",
+          "name": "Gov. Joelcirney Santos Klimaschewsk",
+          "phone": "65 9 9994-4246",
+          "email": "joel@a2eventoseprojetos.com.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - IMAGEM PÚBLICA",
+          "name": "Ludimila Silva Mendes",
+          "phone": "66 9 9676-4157",
+          "email": "ludimilasmendes@hotmail.com",
+          "club": "Rotaract Club de Sorriso"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - SECRETARIA",
+          "name": "Adenauer Telles Paniago",
+          "phone": "67 9 9212-4652",
+          "email": "adenauerpaniago@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - TESOURARIA",
+          "name": "Gov. Zozoel de Paula",
+          "phone": "65 9 9954-4214",
+          "email": "zozoel@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - FUNDAÇÃO ROTÁRIA",
+          "name": "Gov. Jânio Sidney Bonfochi",
+          "phone": "65 9 9989-3132",
+          "email": "janiosibo@hotmail.com",
+          "club": "Rotary Club de Mirassol D'Oeste"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - DQA",
+          "name": "Reinaldo Alves de Aguiar",
+          "phone": "66 9 9663-8376",
+          "email": "reynaldo.aguiar@gmail.com",
+          "club": "Rotary Club de Rondonópolis Comunidade"
+        },
+        {
+          "role": "Membro da Comissção Distrital de Aprendizagem - PROTOCOLO",
+          "name": "Gisela Simona Souza",
+          "phone": "65 9 9920-8186",
+          "email": "giselasvsouza@gmail.com",
+          "club": "Rotary Club de Cuiabá-Bandeirantes"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-centro-de-servicos",
+      "area_id": "equipe-distrital",
+      "name": "Centro de Serviços",
+      "kind": "district_team",
+      "president_name": "Gov. Joelcirney Santos Klimaschewsk",
+      "president_phone": "65 9 9994-4246",
+      "president_email": "joel@a2eventoseprojetos.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Administrador do Centro de Serviços",
+          "name": "Gov. Joelcirney Santos Klimaschewsk",
+          "phone": "65 9 9994-4246",
+          "email": "joel@a2eventoseprojetos.com.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Secretária Executiva do Centro de Serviços",
+          "name": "Selma Julieth de Arruda",
+          "phone": "65 9 9677-8271",
+          "email": "secretariad4440@gmail.com",
+          "club": "- - -"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-secretaria-distrital",
+      "area_id": "equipe-distrital",
+      "name": "Secretaria Distrital",
+      "kind": "district_team",
+      "president_name": "Adenauer Telles Paniago",
+      "president_phone": "67 9 9212-4652",
+      "president_email": "adenauerpaniago@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Secretário Executivo Distrital",
+          "name": "Adenauer Telles Paniago",
+          "phone": "67 9 9212-4652",
+          "email": "adenauerpaniago@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        },
+        {
+          "role": "Secretária Adjunta My Rotary",
+          "name": "Gabriela Grzybowski de Oliveira",
+          "phone": "65 9 9287-6060",
+          "email": "gabrielagrzybowski20@outlook.com",
+          "club": "Rotary Cuiabá Taiamã"
+        },
+        {
+          "role": "Secretária Adjunta Unyclub",
+          "name": "Selma Julieth de Arruda",
+          "phone": "65 9 9677-8271",
+          "email": "secretariad4440@gmail.com",
+          "club": "- - -"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-tesouraria-distrital",
+      "area_id": "equipe-distrital",
+      "name": "Tesouraria Distrital",
+      "kind": "district_team",
+      "president_name": "Gov. Zozoel de Paula",
+      "president_phone": "65 9 9954-4214",
+      "president_email": "zozoel@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Tesoureiro Distrital",
+          "name": "Gov. Zozoel de Paula",
+          "phone": "65 9 9954-4214",
+          "email": "zozoel@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        },
+        {
+          "role": "Tesoureiro Adjunto",
+          "name": "Alci de Oliveira Junior",
+          "phone": "65 9997-5086",
+          "email": "alcijunior@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        },
+        {
+          "role": "CONTADOR DISTRITAL",
+          "name": "Remício Gonçalves da Silva",
+          "phone": "65 9 9982-7618",
+          "email": "remicio10@hotmail.com",
+          "club": "Rotary Club de Cuiabá-Bandeirantes"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-comissao-distrital-de-financas",
+      "area_id": "equipe-distrital",
+      "name": "Comissão Distrital de Finanças",
+      "kind": "district_team",
+      "president_name": "Gov. Zozoel de Paula",
+      "president_phone": "65 9995-4214",
+      "president_email": "zozoel@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da Comissão de Finanças - Tesoureiro(a) Distrital",
+          "name": "Gov. Zozoel de Paula",
+          "phone": "65 9995-4214",
+          "email": "zozoel@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        },
+        {
+          "role": "Tesoureiro(a) Adjunto(a)",
+          "name": "Alci de Oliveira Junior",
+          "phone": "65 9 9997-5086",
+          "email": "alcijunior@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        },
+        {
+          "role": "Tesoureiro(a) Distrital 2027-28",
+          "name": "NÃO DEFINIDO PELO GOVERNADOR 2027-28",
+          "phone": null,
+          "email": null,
+          "club": null
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-assessoria-juridica-distrital",
+      "area_id": "equipe-distrital",
+      "name": "Assessoria Jurídica Distrital",
+      "kind": "district_team",
+      "president_name": "Eduardo Sá",
+      "president_phone": "65 9 9971-8700",
+      "president_email": "bconsult@terra.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Assessor Jurídico Distrital",
+          "name": "Eduardo Sá",
+          "phone": "65 9 9971-8700",
+          "email": "bconsult@terra.com.br",
+          "club": "Rotary Club de Várzea Grande Centro"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-planejamento-estrategico",
+      "area_id": "equipe-distrital",
+      "name": "Planejamento Estratégico",
+      "kind": "district_team",
+      "president_name": "Serafim Carvalho Melo",
+      "president_phone": "65 9 8112-6655",
+      "president_email": "serafimcmelo@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da Comissão Distrital de Planejamento Estratégico",
+          "name": "Serafim Carvalho Melo",
+          "phone": "65 9 8112-6655",
+          "email": "serafimcmelo@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        },
+        {
+          "role": "Coordenador de Suporte aos Clubes em Planejamento",
+          "name": "Leôncio Pinheiro",
+          "phone": "65 9 9925-3525",
+          "email": "pinheiroleoncio51@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        },
+        {
+          "role": "Coordenador de Monitoramento e Indicadores",
+          "name": "Olávio José da Silva",
+          "phone": "65 9 9966-0162",
+          "email": "olavio.silva@hotmail.com",
+          "club": "Rotary Club de Cuiabá"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-desenvolvimento-do-quadro-associativo-dqa",
+      "area_id": "equipe-distrital",
+      "name": "Desenvolvimento do Quadro Associativo (DQA)",
+      "kind": "district_team",
+      "president_name": "Reinaldo Alves de Aguiar",
+      "president_phone": "66 9 9663-8376",
+      "president_email": "reynaldo.aguiar@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da Comissão Distrital de DQA",
+          "name": "Reinaldo Alves de Aguiar",
+          "phone": "66 9 9663-8376",
+          "email": "reynaldo.aguiar@gmail.com",
+          "club": "Rotary Club de Rondonópolis Comunidade"
+        },
+        {
+          "role": "Coordenador Distrital de Desenvolvimento de Novos Clubes",
+          "name": "Marcio Martinez Pereira",
+          "phone": "65 9 9689-5153",
+          "email": "marcio_martinez9@hotmail.com",
+          "club": "Rotary Club de Curvelândia"
+        },
+        {
+          "role": "Coordenador Distrital de Engajamento",
+          "name": "Vanderley Antiqueira",
+          "phone": "65 9 9608-0687",
+          "email": "vanderley.antiqueira@yahoo.com.br",
+          "club": "Rotary Club de Várzea Grande Aeroporto"
+        },
+        {
+          "role": "Coordenadora Distrital de Atração de Associados e Meu Clube é 15",
+          "name": "Aparecida Harue Shinike Wachholz",
+          "phone": "66 9 9967-3440",
+          "email": "cidashinike@yahoo.com.br",
+          "club": "Rotary Club de Peixoto de Azevedo"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-fundacao-rotaria-fr",
+      "area_id": "equipe-distrital",
+      "name": "Fundação Rotária - (FR)",
+      "kind": "district_team",
+      "president_name": "Gov. Jânio Sidney Bonfochi",
+      "president_phone": "65 9 9989-3132",
+      "president_email": "janiosibo@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da Comissão Distrital da Fundação Rotária",
+          "name": "Gov. Jânio Sidney Bonfochi",
+          "phone": "65 9 9989-3132",
+          "email": "janiosibo@hotmail.com",
+          "club": "Rotary Club de Mirassol D'Oeste"
+        },
+        {
+          "role": "Coordenador Distrital de Grandes Doações",
+          "name": "José Carlos Marques de Jesus",
+          "phone": "65 9 9683-1550",
+          "email": "kcmjmarques@gmail.com",
+          "club": "Rotary Club de Cáceres Pantanal"
+        },
+        {
+          "role": "Coordenador Distrital de Subsídios Distritais e Globais",
+          "name": "Gov. Jânio Sidney Bonfochi",
+          "phone": "65 9 9989-3132",
+          "email": "janiosibo@hotmail.com",
+          "club": "Rotary Club de Mirassol D'Oeste"
+        },
+        {
+          "role": "Coordenador Distrital de Bolsas Rotary pela Paz",
+          "name": "Albertina Aparecida Alves",
+          "phone": "65 9 9238-4338",
+          "email": "albertinaalves67@gmail.com",
+          "club": "Rotary Club de Várzea Grande"
+        },
+        {
+          "role": "Coordenador Distrital de Captação de Recursos",
+          "name": "Gov. Zozoel de Paula",
+          "phone": "65 9 9954-4214",
+          "email": "zozoel@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Coordenador Distrital de Gerenciamento do Fundo Anual",
+          "name": "Gov. Joelcirney Santos Klimaschewsk",
+          "phone": "65 9 9994-4246",
+          "email": "joel@a2eventoseprojetos.com.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Coordenador Distrital da ABTRF",
+          "name": "Domingus Sávio Santana",
+          "phone": "66 9 9901-0191",
+          "email": "arrobapecuaria@hotmail.com",
+          "club": "Rotary Club de Primavera do Leste"
+        },
+        {
+          "role": "Coordenador do Programa - Empresa Cidadã",
+          "name": "José Providencia Rocha",
+          "phone": "65 9 9953-7788",
+          "email": "joseprovidencia01@gmail.com",
+          "club": "Rotary Club de Cáceres Pantanal"
+        },
+        {
+          "role": "Coordenador do Programa - Agro Cidadão",
+          "name": "Nildo Lima Queiroz",
+          "phone": "65 9 9987-1055",
+          "email": "nossatga@gmail.com",
+          "club": "Rotary Club de Sorriso"
+        },
+        {
+          "role": "Coordenador do Programa - Clube Cidadão",
+          "name": "Abraão Aparecido Campos da Silva",
+          "phone": "65 9 9624-1627",
+          "email": "abraao_campos1973@hotmail.com",
+          "club": "Rotary Club Rio Branco-Rota das Águas"
+        },
+        {
+          "role": "Coordenador(a) Distrital da Sociedade Paul Harris",
+          "name": "Gov. Reinaldo João Della Pasqua",
+          "phone": "65 9 9982-3448",
+          "email": "depasqua1821@gmail.com",
+          "club": "Rotary Club de Várzea Grande Centro"
+        },
+        {
+          "role": "Coordenador(a) Distrital da Polio Plus",
+          "name": "Célis Nadine França de Souza Vieira",
+          "phone": "65 9 8478-3895",
+          "email": "celisnadines@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        },
+        {
+          "role": "Coordenador de Seguro Solidário",
+          "name": "Mariângela Giavarotti Camara Milan",
+          "phone": "65 9 9603-4889",
+          "email": "mariangela@solucaoseguros.com.br",
+          "club": "Rotary Club de Cuiabá Bandeirantes"
+        },
+        {
+          "role": "Coordenador de Major Donnors",
+          "name": "Gov. Reinaldo João Della Pasqua",
+          "phone": "65 9 9982-3448",
+          "email": "depasqua1821@gmail.com",
+          "club": "Rotary Club de Várzea Grande Centro"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-comissao-distrital-recursos-consultores-tecnicos-da-fundacao-rotaria",
+      "area_id": "equipe-distrital",
+      "name": "COMISSÃO DISTRITAL RECURSOS - Consultores Técnicos da Fundação Rotária",
+      "kind": "district_team",
+      "president_name": "Mario Mateus Sugizaki",
+      "president_phone": "66 9 9646-4111",
+      "president_email": "mario.ufmt@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador da Rede de Recursos Distritais",
+          "name": "Mario Mateus Sugizaki",
+          "phone": "66 9 9646-4111",
+          "email": "mario.ufmt@gmail.com",
+          "club": "Rotary Club de Sinop-Teles Pires"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-imagem-publica-ip",
+      "area_id": "equipe-distrital",
+      "name": "Imagem Publica - (IP)",
+      "kind": "district_team",
+      "president_name": "Ludimila Silva Mendes",
+      "president_phone": "66 9 9676-4157",
+      "president_email": "ludimilasmendes@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da Comissão Distrital de Imagem Pública",
+          "name": "Ludimila Silva Mendes",
+          "phone": "66 9 9676-4157",
+          "email": "ludimilasmendes@hotmail.com",
+          "club": "Rotaract Club de Sorriso"
+        },
+        {
+          "role": "Coordenador de Notícias Sistema Unyclub",
+          "name": "Ludimila Silva Mendes",
+          "phone": "66 9 9676-4157",
+          "email": "ludimilasmendes@hotmail.com",
+          "club": "Rotaract Club de Sorriso"
+        },
+        {
+          "role": "Coordenador de Artes e Mídias Sociais",
+          "name": "Yves Kleverson Alves de Araujo",
+          "phone": "65 9 9900-3905",
+          "email": "yves.lestat@gmail.com",
+          "club": "Rotaract Club de Barra do Bugres"
+        },
+        {
+          "role": "Coordenador de Notícias Revista Rotary Brasil",
+          "name": "Fernando Santos Carlomagno",
+          "phone": "65 9 8152-9033",
+          "email": "fmagnus1@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-ryla",
+      "area_id": "equipe-distrital",
+      "name": "RYLA",
+      "kind": "district_team",
+      "president_name": "Cleonice Aparecida de Paulo Coelho",
+      "president_phone": "65 9 9975-0080",
+      "president_email": "cleomsm@msn.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenadora Distrital do RYLA",
+          "name": "Cleonice Aparecida de Paulo Coelho",
+          "phone": "65 9 9975-0080",
+          "email": "cleomsm@msn.com",
+          "club": "Rotary Club de Cuiabá-Bandeirantes"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-protocolo-distrital",
+      "area_id": "equipe-distrital",
+      "name": "Protocolo Distrital",
+      "kind": "district_team",
+      "president_name": "Gisela Simona Souza",
+      "president_phone": "65 9 9920-8186",
+      "president_email": "giselasvsouza@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenadora de Protocolo Distrital",
+          "name": "Gisela Simona Souza",
+          "phone": "65 9 9920-8186",
+          "email": "giselasvsouza@gmail.com",
+          "club": "Rotary Club de Cuiabá-Bandeirantes"
+        },
+        {
+          "role": "Protocolo Distrital Adjunto",
+          "name": "Marcos Pereira Coelho",
+          "phone": "65 9 9606-6464",
+          "email": "reprografcopiadoras@hotmail.com",
+          "club": "Rotary Club de Cuiabá-Bandeirantes"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-companheirismo-e-amizade",
+      "area_id": "equipe-distrital",
+      "name": "Companheirismo e Amizade",
+      "kind": "district_team",
+      "president_name": "João Guerino Faneli",
+      "president_phone": "65 9 9614-7446",
+      "president_email": "joaofaneli@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Fortalecimento do Companheirismo - Interclubes",
+          "name": "João Guerino Faneli",
+          "phone": "65 9 9614-7446",
+          "email": "joaofaneli@hotmail.com",
+          "club": "Rotary Club de São José dos Quatro Marcos"
+        },
+        {
+          "role": "Coordenadora Distrital de Intercâmbio Rotário da Amizade",
+          "name": "Maria de Lourdes Sella",
+          "phone": "65 9 9920-8186",
+          "email": "mariasella56@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-servicos-a-profissionais",
+      "area_id": "equipe-distrital",
+      "name": "Serviços à Profissionais",
+      "kind": "district_team",
+      "president_name": "João Bosco da Costa Júnior",
+      "president_phone": "65 9 9609-6086",
+      "president_email": "jbosco.cjunior@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Serviços Profissionais",
+          "name": "João Bosco da Costa Júnior",
+          "phone": "65 9 9609-6086",
+          "email": "jbosco.cjunior@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-servicos-a-comunidade",
+      "area_id": "equipe-distrital",
+      "name": "Serviços à Comunidade",
+      "kind": "district_team",
+      "president_name": "Wilson Botelho de Carvalho Neto",
+      "president_phone": "65 9 9974-3792",
+      "president_email": "wilson_botelho35@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Serviços à Comunidade",
+          "name": "Wilson Botelho de Carvalho Neto",
+          "phone": "65 9 9974-3792",
+          "email": "wilson_botelho35@hotmail.com",
+          "club": "Rotary Club de Mirassol D'Oeste"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-conferencia-distrital",
+      "area_id": "equipe-distrital",
+      "name": "Conferência Distrital",
+      "kind": "district_team",
+      "president_name": "Luci Emilia Grzybowski de Oliveira",
+      "president_phone": "65 9 9202-8937",
+      "president_email": "luciemilia2010@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenadora da Conferência Distrital",
+          "name": "Luci Emilia Grzybowski de Oliveira",
+          "phone": "65 9 9202-8937",
+          "email": "luciemilia2010@gmail.com",
+          "club": "Rotary Club de Várzea Grande Aeroporto"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-servicos-internacionais",
+      "area_id": "equipe-distrital",
+      "name": "Serviços Internacionais",
+      "kind": "district_team",
+      "president_name": "Clovis Batista da Silva",
+      "president_phone": "65 9 9987-1007",
+      "president_email": "cloviselepar@terra.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente Distrital de Serviços Internacionais",
+          "name": "Clovis Batista da Silva",
+          "phone": "65 9 9987-1007",
+          "email": "cloviselepar@terra.com.br",
+          "club": "Rotary Club de Tangará da Serra"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-yep-intercambio-de-jovens",
+      "area_id": "equipe-distrital",
+      "name": "YEP - Intercâmbio de Jovens",
+      "kind": "district_team",
+      "president_name": "Gov. Joelcirney Santos Klimaschewsk",
+      "president_phone": "65 9 9994-4246",
+      "president_email": "joel@a2eventoseprojetos.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da Comissão de Intercâmbio de Jovens",
+          "name": "Gov. Joelcirney Santos Klimaschewsk",
+          "phone": "65 9 9994-4246",
+          "email": "joel@a2eventoseprojetos.com.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Coordenador Geral de Intercâmbio de Jovens e de curto prazo",
+          "name": "Agilson Azizes Ferreira",
+          "phone": "65 9 9950-3939",
+          "email": "agilsonazizes@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Vice Coordenador Geral de Intercâmbio de Jovens e de curto prazo",
+          "name": "Roner Fabricio Leite Antônio",
+          "phone": "65 9 9613-7401",
+          "email": "ronerleite@hotmail.com",
+          "club": "Rotary Club de Cuiabá Bandeirantes"
+        },
+        {
+          "role": "Conselheiro Distrital do YEP",
+          "name": "Gov. Clóvis Batista da Silva",
+          "phone": "65 9 9987-1007",
+          "email": "cloviselepar@terra.com.br",
+          "club": "Rotary Club de Tangará da Serra"
+        },
+        {
+          "role": "Correspondente Internacional e Facilitadora de Vagas",
+          "name": "Bruna Ergang da Silva",
+          "phone": "66 9 9961-0343",
+          "email": "brunaergang@yahoo.com",
+          "club": "Rotary Club de Sorriso-Ouro Verde"
+        },
+        {
+          "role": "Oficial Distrital de Proteção à Juventude",
+          "name": "Airton Cella",
+          "phone": "66 9 9985-5332",
+          "email": "cella@cellaadvogados.com.br",
+          "club": "Rotary Club de Sorriso Joia do Cerrado"
+        },
+        {
+          "role": "Coordenador(a) Inbound",
+          "name": "Roner Fabricio Leite Antônio",
+          "phone": "65 9 9613-7401",
+          "email": "ronerleite@hotmail.com",
+          "club": "Rotary Club de Cuiabá Bandeirantes"
+        },
+        {
+          "role": "Coordenador(a) Outbound",
+          "name": "Margareth Carvalho",
+          "phone": "65 9 9906-8411",
+          "email": "margacarvalho30@hotmail.com",
+          "club": "Rotary Club de Cuiabá Bandeirantes"
+        },
+        {
+          "role": "1o. Tesoureiro",
+          "name": "Rodrigo Ontiveros",
+          "phone": "65 9 9971-4136",
+          "email": "rodrigoontiveros@me.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "2o. Tesoureiro",
+          "name": "João Bosco da Costa Júnior",
+          "phone": "65 9 9609-6086",
+          "email": "jbosco.cjunior@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "1a. Secretária",
+          "name": "Nataliê Maria Dias B. da Costa",
+          "phone": "65 9 9607-0902",
+          "email": "nataliecosta@detran.mt.gov.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Coordenador(a) de Imagem Pública da Comissão de Intercâmbio",
+          "name": "Claudia Batista Rodrigues Campos Ferreira",
+          "phone": "65 9 9627-6847",
+          "email": "claudiabrcferreira@hotmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Embaixadora do Programa de Jovens do Distrito",
+          "name": "Kamile Bueno da Costa",
+          "phone": "65 9 9956-3094",
+          "email": "kamilebueno@gmail.com",
+          "club": "EX-INTERCAMBISTA"
+        },
+        {
+          "role": "Assessoria Jurídica",
+          "name": "Agilson Azizes Ferreira",
+          "phone": "65 9 9950-3939",
+          "email": "agilsonazizes@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "Coordenador Regional Distrital – Região Cuiabá",
+          "name": "Carlos Theobaldo Souza",
+          "phone": "65 9 8126-0044",
+          "email": "carlostheobaldo@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        },
+        {
+          "role": "Coordenadora Regional Distrital – Região Sul",
+          "name": "Sandra Vieira Alves Dib",
+          "phone": "66 9 9984-0153",
+          "email": "sandraalvesdib@hotmail.com",
+          "club": "Rotary Club de Rondonópolis"
+        },
+        {
+          "role": "Coordenadora Regional Distrital – Região Norte",
+          "name": "Mônica Francielle Albieri Testa",
+          "phone": "44 9 9828-8183",
+          "email": "monicafranciellealbieri@gmail.com",
+          "club": "Rotary Club de Lucas do Rio Verde"
+        },
+        {
+          "role": "Coordenador Regional Distrital – Região Leste",
+          "name": "Evandro Alencar Luft Iappe",
+          "phone": "66 9 8438-4505",
+          "email": "evandro.iappe@gmail.com",
+          "club": "Rotary Club de Querência"
+        },
+        {
+          "role": "Contador",
+          "name": "José Carlos Monteiro",
+          "phone": null,
+          "email": null,
+          "club": "NÃO ROTARIANO"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-parcerias-convenios-e-justica-solidaria",
+      "area_id": "equipe-distrital",
+      "name": "Parcerias, Convênios e Justiça Solidaria",
+      "kind": "district_team",
+      "president_name": "Carlos Ramão Melo",
+      "president_phone": "65 9 9968-5999",
+      "president_email": "merlotga@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Parcerias, Convênios e Justiça Solidária",
+          "name": "Carlos Ramão Melo",
+          "phone": "65 9 9968-5999",
+          "email": "merlotga@hotmail.com",
+          "club": "Rotary Club de Tangará da Serra Centro"
+        },
+        {
+          "role": "Coordenador Distrital Mobilidade Para Todos",
+          "name": "Henrique Almeida",
+          "phone": "65 9 9243-7308",
+          "email": "henriquetadeu25@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-diversidade-equidade-e-inclusao-dei",
+      "area_id": "equipe-distrital",
+      "name": "Diversidade - Equidade e Inclusão (DEI)",
+      "kind": "district_team",
+      "president_name": "JOELI DO SOCORRO A. S. MILHORANCA",
+      "president_phone": "65 9 9914-3022",
+      "president_email": "joelitga@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de DEI",
+          "name": "JOELI DO SOCORRO A. S. MILHORANCA",
+          "phone": "65 9 9914-3022",
+          "email": "joelitga@gmail.com",
+          "club": "Rotary Club de Tangará da Serra Centro"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-alumni",
+      "area_id": "equipe-distrital",
+      "name": "Alumni",
+      "kind": "district_team",
+      "president_name": "Paulo Eduardo De Carvalho Wolkmer",
+      "president_phone": "65 9 9981-4695",
+      "president_email": "pwolkmer@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Alumni",
+          "name": "Paulo Eduardo De Carvalho Wolkmer",
+          "phone": "65 9 9981-4695",
+          "email": "pwolkmer@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-acao-humanitaria-show-de-premios",
+      "area_id": "equipe-distrital",
+      "name": "Ação Humanitária – Show de Prêmios",
+      "kind": "district_team",
+      "president_name": "Gov. Zozoel de Paula",
+      "president_phone": "65 9 9954-4214",
+      "president_email": "zozoel@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital da Ação Humanitária",
+          "name": "Gov. Zozoel de Paula",
+          "phone": "65 9 9954-4214",
+          "email": "zozoel@gmail.com",
+          "club": "Rotary Club de Cuiabá-CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-meio-ambiente",
+      "area_id": "equipe-distrital",
+      "name": "Meio Ambiente",
+      "kind": "district_team",
+      "president_name": "Mônica Francielle Albieri",
+      "president_phone": "44 9 9828-8183",
+      "president_email": "monicafranciellealbieri@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital Projeto Lixo Eletrônico e Preserve o Planeta Terra",
+          "name": "Mônica Francielle Albieri",
+          "phone": "44 9 9828-8183",
+          "email": "monicafranciellealbieri@gmail.com",
+          "club": "Rotary Club de Lucas do Rio Verde"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-eventos-esportivos",
+      "area_id": "equipe-distrital",
+      "name": "Eventos Esportivos",
+      "kind": "district_team",
+      "president_name": "Judson Marcos Vieira",
+      "president_phone": "65 9 8117-5444",
+      "president_email": "judsonmvieira@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Eventos Esportivos",
+          "name": "Judson Marcos Vieira",
+          "phone": "65 9 8117-5444",
+          "email": "judsonmvieira@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-eventos-rotary-day",
+      "area_id": "equipe-distrital",
+      "name": "Eventos Rotary Day",
+      "kind": "district_team",
+      "president_name": "Célis Nadine França de Souza Vieira",
+      "president_phone": "65 9 8117-5444",
+      "president_email": "celisnadines@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital de Eventos ROTARY DAY",
+          "name": "Célis Nadine França de Souza Vieira",
+          "phone": "65 9 8117-5444",
+          "email": "celisnadines@gmail.com",
+          "club": "Rotary Club de Cuiabá"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-prevencao-e-tratamento-de-doencas",
+      "area_id": "equipe-distrital",
+      "name": "Prevenção e Tratamento de Doenças",
+      "kind": "district_team",
+      "president_name": "Cleusa Matos",
+      "president_phone": "66 9 8112-6454",
+      "president_email": "martinsmatoscleusa@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenadora Distrital do Programa Hepatite Zero",
+          "name": "Cleusa Matos",
+          "phone": "66 9 8112-6454",
+          "email": "martinsmatoscleusa@gmail.com",
+          "club": "Rotary Club de Barra do Garças"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-programa-multiacao",
+      "area_id": "equipe-distrital",
+      "name": "Programa Multiação",
+      "kind": "district_team",
+      "president_name": "Jeferson de Oliveira",
+      "president_phone": "65 9 9233-3860",
+      "president_email": "jefferson.rtcvgaeroporto@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenador Distrital do Programa Multiação",
+          "name": "Jeferson de Oliveira",
+          "phone": "65 9 9233-3860",
+          "email": "jefferson.rtcvgaeroporto@gmail.com",
+          "club": "Rotary Club de Várzea Grande Aeroporto"
+        },
+        {
+          "role": "Membro da Comissão do Programa Multiação",
+          "name": "Luci Emilia Grzybowski de Oliveira",
+          "phone": "65 9 9202-8937",
+          "email": "luciemilia2010@gmail.com",
+          "club": "Rotary Club de Várzea Grande Aeroporto"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-rotaract",
+      "area_id": "equipe-distrital",
+      "name": "Rotaract",
+      "kind": "district_team",
+      "president_name": "Aline Tomazelli",
+      "president_phone": null,
+      "president_email": null,
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Coordenadora Distrital do Rotaract",
+          "name": "Aline Tomazelli",
+          "phone": null,
+          "email": null,
+          "club": "Rotary Club de Campo Novo do Parecis"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-interact",
+      "area_id": "equipe-distrital",
+      "name": "Interact",
+      "kind": "district_team",
+      "president_name": "Silviany Miranda Carvalho",
+      "president_phone": "65 9 9907-7195",
+      "president_email": "silviany.miranda@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Conselheira Distrital do Interact",
+          "name": "Silviany Miranda Carvalho",
+          "phone": "65 9 9907-7195",
+          "email": "silviany.miranda@gmail.com",
+          "club": "Rotary Club de Lucas do Rio Verde"
+        },
+        {
+          "role": "Conselheiro Distrital do Interact",
+          "name": "Oelson Copetti",
+          "phone": "65 9 9940-2723",
+          "email": "oelsoncopetti55@gmail.com",
+          "club": "Rotary Club de Lucas do Rio Verde"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-rotakids",
+      "area_id": "equipe-distrital",
+      "name": "Rotakids",
+      "kind": "district_team",
+      "president_name": "Rita Maria Da Silva",
+      "president_phone": "66 9 9613-0276",
+      "president_email": "rittamari@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Conselheiro/a Distrital do Rotakids",
+          "name": "Rita Maria Da Silva",
+          "phone": "66 9 9613-0276",
+          "email": "rittamari@hotmail.com",
+          "club": "Rotary Club de Rondonópolis Leste"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-abrol-mt",
+      "area_id": "equipe-distrital",
+      "name": "ABROL MT",
+      "kind": "district_team",
+      "president_name": "Adão Alonço dos Reis",
+      "president_phone": "65 9 9971-1950",
+      "president_email": "adaoreis@terra.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Presidente da ABROL MT",
+          "name": "Adão Alonço dos Reis",
+          "phone": "65 9 9971-1950",
+          "email": "adaoreis@terra.com.br",
+          "club": "Rotary Club de Várzea Grande Centro"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-regocentro-2027-e-instituto-rotary-2026-27",
+      "area_id": "equipe-distrital",
+      "name": "Regocentro 2027 e Instituto Rotary 2026-27",
+      "kind": "district_team",
+      "president_name": "Adilson Pereira da Silva",
+      "president_phone": "66 9 9204-2885",
+      "president_email": "adilsonamazonia@bol.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Promotor do REGOCENTRO 2027 e do INSTITUTO ROTARY 2026-27",
+          "name": "Adilson Pereira da Silva",
+          "phone": "66 9 9204-2885",
+          "email": "adilsonamazonia@bol.com.br",
+          "club": "Rotary Club de Alta Floresta-Centro"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-convencao-internacional",
+      "area_id": "equipe-distrital",
+      "name": "Convenção Internacional",
+      "kind": "district_team",
+      "president_name": "Gov. Joelcirney Santos Klimaschewsk",
+      "president_phone": "65 9 9994-4246",
+      "president_email": "joel@a2eventoseprojetos.com.br",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Promotor do CONVENÇÃO INTERNACIONAL 2027: Espanha",
+          "name": "Gov. Joelcirney Santos Klimaschewsk",
+          "phone": "65 9 9994-4246",
+          "email": "joel@a2eventoseprojetos.com.br",
+          "club": "Rotary Club de Cuiabá CPA"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-conselho-de-legislacao",
+      "area_id": "equipe-distrital",
+      "name": "Conselho de Legislação",
+      "kind": "district_team",
+      "president_name": "Gov. Jânio Sidney Bonfochi",
+      "president_phone": "65 9 9989-3132",
+      "president_email": "janiosibo@hotmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "Titular",
+          "name": "Gov. Jânio Sidney Bonfochi",
+          "phone": "65 9 9989-3132",
+          "email": "janiosibo@hotmail.com",
+          "club": "Rotary Club de Mirassol D'Oeste"
+        },
+        {
+          "role": "Suplente",
+          "name": "Fernando Cesar Dalmolin",
+          "phone": "65 9 8132-9277",
+          "email": "fernandocesard@hotmail.com",
+          "club": "Rotary Club de Cuiabá"
+        }
+      ]
+    },
+    {
+      "id": "equipe-distrital-conselho-fiscal",
+      "area_id": "equipe-distrital",
+      "name": "Conselho Fiscal",
+      "kind": "district_team",
+      "president_name": "Rogério Muchão Cola",
+      "president_phone": "65 9971-4800",
+      "president_email": "rogerio.muchao65@gmail.com",
+      "address": null,
+      "latitude": null,
+      "longitude": null,
+      "meeting_schedule": null,
+      "logo": null,
+      "members": [
+        {
+          "role": "1o. TITULAR",
+          "name": "Rogério Muchão Cola",
+          "phone": "65 9971-4800",
+          "email": "rogerio.muchao65@gmail.com",
+          "club": "Rotary Club de Várzea Grande Centro"
+        },
+        {
+          "role": "2o.TITULAR",
+          "name": "Maria Helena G. Coimbra",
+          "phone": "65 9661-9555",
+          "email": "lenagiroto@hotmail.com",
+          "club": "Rotary Club de Cuiabá"
+        },
+        {
+          "role": "3o.TITULAR",
+          "name": "Marcos Pereira Coelho",
+          "phone": "65 9606-6464",
+          "email": "reprografcopiadoras@hotmail.com",
+          "club": "Rotary Club de Cuiabá Bandeirantes"
+        },
+        {
+          "role": "1o. SUPLENTE",
+          "name": "Lucas De Marchi Porto",
+          "phone": "65 9979-3620",
+          "email": "lucassmporto@gmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        },
+        {
+          "role": "2o. SUPLENTE",
+          "name": "Kalyna Lygia Brandão Espindola Lima",
+          "phone": "65 9601-3685",
+          "email": "kalyna25@gmail.com",
+          "club": "Rotary Club de Várzea Grande Cristo Rei"
+        },
+        {
+          "role": "3o. SUPLENTE",
+          "name": "Regina Lucia Mathias De Oliveira Paniago",
+          "phone": "67 9 8454-7041",
+          "email": "regina.mathias728@hotmail.com",
+          "club": "Rotary Club de Cuiabá CPA"
+        }
+      ]
     }
   ]
 }
