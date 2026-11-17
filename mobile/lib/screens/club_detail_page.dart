@@ -139,6 +139,35 @@ class _ClubDetailPageState extends State<ClubDetailPage> {
   }
 
   List<Widget> _buildDetails(BuildContext context, ClubDetail club) {
+    if (club.isDistrictTeam) {
+      return _buildTeamDetails(context, club);
+    }
+    return _buildClubDetails(context, club);
+  }
+
+  List<Widget> _buildTeamDetails(BuildContext context, ClubDetail club) {
+    final theme = Theme.of(context);
+    final members = club.members;
+    return [
+      const Overline('Equipe Distrital'),
+      const SizedBox(height: 6),
+      Text(club.name, style: theme.textTheme.headlineMedium),
+      const SizedBox(height: 8),
+      Text(
+        members.length == 1 ? '1 integrante' : '${members.length} integrantes',
+        style: theme.textTheme.bodyMedium?.copyWith(
+          color: RotaryTheme.textMuted,
+        ),
+      ),
+      const SizedBox(height: 20),
+      for (var i = 0; i < members.length; i++) ...[
+        if (i > 0) const SizedBox(height: 12),
+        _MemberCard(member: members[i], onCall: _call, onEmail: _email),
+      ],
+    ];
+  }
+
+  List<Widget> _buildClubDetails(BuildContext context, ClubDetail club) {
     final theme = Theme.of(context);
     final phone = _nonEmpty(club.presidentPhone);
     final email = _nonEmpty(club.presidentEmail);
@@ -339,10 +368,11 @@ class _HeroAppBar extends StatelessWidget {
                   ),
                   child: Stack(
                     children: [
+                      // Sem offset negativo: a roda precisa aparecer inteira.
                       const Positioned(
-                        right: -60,
-                        top: -20,
-                        child: RotaryWheelMark(size: 240, opacity: 0.08),
+                        right: 16,
+                        top: 56,
+                        child: RotaryWheelMark(size: 120, opacity: 0.14),
                       ),
                       Align(
                         alignment: const Alignment(0, 0.35),
@@ -560,6 +590,96 @@ class _ContactRow extends StatelessWidget {
             const ChevronBadge(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _MemberCard extends StatelessWidget {
+  const _MemberCard({
+    required this.member,
+    required this.onCall,
+    required this.onEmail,
+  });
+
+  final TeamMember member;
+  final void Function(String phone) onCall;
+  final void Function(String email) onEmail;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final phone = member.phone?.trim();
+    final email = member.email?.trim();
+    final club = member.club?.trim();
+    final hasPhone = phone != null && phone.isNotEmpty;
+    final hasEmail = email != null && email.isNotEmpty;
+
+    return AppCard(
+      padding: EdgeInsets.zero,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 24,
+                  backgroundColor: RotaryTheme.blue,
+                  foregroundColor: Colors.white,
+                  child: Text(
+                    initials(member.name),
+                    style: const TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Overline(member.role, color: RotaryTheme.textMuted),
+                      const SizedBox(height: 4),
+                      Text(
+                        displayName(member.name),
+                        style: theme.textTheme.titleMedium,
+                      ),
+                      if (club != null && club.isNotEmpty) ...[
+                        const SizedBox(height: 4),
+                        Text(
+                          club,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: RotaryTheme.textMuted,
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          if (hasPhone) ...[
+            const Divider(height: 1),
+            _ContactRow(
+              icon: Icons.phone_outlined,
+              value: phone,
+              hint: 'Toque para ligar',
+              onTap: () => onCall(phone),
+            ),
+          ],
+          if (hasEmail) ...[
+            const Divider(height: 1),
+            _ContactRow(
+              icon: Icons.email_outlined,
+              value: email,
+              hint: 'Toque para enviar e-mail',
+              onTap: () => onEmail(email),
+            ),
+          ],
+        ],
       ),
     );
   }

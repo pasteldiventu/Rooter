@@ -37,6 +37,7 @@ class _ClubsPageState extends State<ClubsPage> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final governor = widget.area.assistantGovernor;
+    final isTeam = widget.area.isDistrictTeam;
 
     return Scaffold(
       body: SafeArea(
@@ -71,9 +72,13 @@ class _ClubsPageState extends State<ClubsPage> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
-                            clubs.length == 1
-                                ? '1 clube'
-                                : '${clubs.length} clubes',
+                            isTeam
+                                ? (clubs.length == 1
+                                      ? '1 função'
+                                      : '${clubs.length} funções')
+                                : (clubs.length == 1
+                                      ? '1 clube'
+                                      : '${clubs.length} clubes'),
                             style: theme.textTheme.labelLarge?.copyWith(
                               color: RotaryTheme.gold,
                             ),
@@ -82,13 +87,15 @@ class _ClubsPageState extends State<ClubsPage> {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  const Overline('Clubes da área'),
+                  Overline(isTeam ? 'Distrito 4440' : 'Clubes da área'),
                   const SizedBox(height: 6),
                   Text(widget.area.name, style: theme.textTheme.headlineMedium),
                   if (governor != null && governor.trim().isNotEmpty) ...[
                     const SizedBox(height: 6),
                     Text(
-                      'Gov. Assistente: ${displayName(governor)}',
+                      isTeam
+                          ? displayName(governor)
+                          : 'Gov. Assistente: ${displayName(governor)}',
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: RotaryTheme.textMuted,
                       ),
@@ -133,6 +140,7 @@ class _ClubsPageState extends State<ClubsPage> {
                     final club = clubs[index];
                     return _ClubCard(
                       club: club,
+                      isDistrictTeam: isTeam,
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
@@ -171,26 +179,51 @@ class _ClubsPageState extends State<ClubsPage> {
 }
 
 class _ClubCard extends StatelessWidget {
-  const _ClubCard({required this.club, required this.onTap});
+  const _ClubCard({
+    required this.club,
+    required this.onTap,
+    this.isDistrictTeam = false,
+  });
 
   final ClubSummary club;
   final VoidCallback onTap;
+  final bool isDistrictTeam;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final count = club.memberCount;
     return AppCard(
       onTap: onTap,
       padding: const EdgeInsets.all(12),
       child: Row(
         children: [
-          const RotaryLogo(size: 60, radius: 14),
+          if (isDistrictTeam)
+            Container(
+              width: 60,
+              height: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: RotaryTheme.gold.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: const Icon(
+                Icons.badge_outlined,
+                color: RotaryTheme.gold,
+                size: 28,
+              ),
+            )
+          else
+            const RotaryLogo(size: 60, radius: 14),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Overline('Rotary Club', color: RotaryTheme.textMuted),
+                Overline(
+                  isDistrictTeam ? 'Função / comissão' : 'Rotary Club',
+                  color: RotaryTheme.textMuted,
+                ),
                 const SizedBox(height: 4),
                 Text(
                   club.name,
@@ -198,6 +231,15 @@ class _ClubCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.titleMedium,
                 ),
+                if (isDistrictTeam && count != null && count > 0) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    count == 1 ? '1 integrante' : '$count integrantes',
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: RotaryTheme.textMuted,
+                    ),
+                  ),
+                ],
               ],
             ),
           ),

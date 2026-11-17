@@ -21,10 +21,20 @@ class RooterApp extends StatelessWidget {
       title: 'Distrito 4440',
       debugShowCheckedModeBanner: false,
       theme: RotaryTheme.dark(),
-      builder: (context, child) => AnnotatedRegion<SystemUiOverlayStyle>(
-        value: RotaryTheme.overlayStyle,
-        child: child!,
-      ),
+      builder: (context, child) {
+        return AnnotatedRegion<SystemUiOverlayStyle>(
+          value: RotaryTheme.overlayStyle,
+          child: ColoredBox(
+            color: RotaryTheme.background,
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 720),
+                child: child ?? const SizedBox.shrink(),
+              ),
+            ),
+          ),
+        );
+      },
       home: AreasPage(api: api),
     );
   }

@@ -202,10 +202,12 @@ class _AreasContent extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 24),
-                  _HeroCard(areaCount: areas.length),
+                  _HeroCard(
+                    areaCount: areas.where((a) => !a.isDistrictTeam).length,
+                  ),
                   const SizedBox(height: 28),
                   SectionHeader(
-                    title: 'Áreas',
+                    title: 'Áreas e equipe',
                     trailing: '${areas.length} no total',
                   ),
                   const SizedBox(height: 12),
@@ -266,69 +268,71 @@ class _HeroCard extends StatelessWidget {
           colors: [RotaryTheme.blue, Color(0xFF0E2A5C)],
         ),
       ),
-      child: Stack(
-        children: [
-          const Positioned(
-            right: -40,
-            bottom: -40,
-            child: RotaryWheelMark(size: 180, opacity: 0.18),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(22),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Overline('Distrito · MT'),
-                const SizedBox(height: 10),
-                Text(
-                  'Clubes Rotary de\nMato Grosso',
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    color: Colors.white,
-                    height: 1.15,
+      // borderRadius 24 → padding direito/inferior precisa ser ≥ 28
+      // senão o clip arredondado corta a roda.
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(22, 22, 28, 28),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Overline('Distrito · MT'),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Clubes Rotary de\nMato Grosso',
+                    style: theme.textTheme.headlineSmall?.copyWith(
+                      color: Colors.white,
+                      height: 1.15,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 10),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 240),
-                  child: Text(
+                  const SizedBox(height: 10),
+                  Text(
                     'Este app cobre apenas o estado de MT. Escolha uma área para ver os clubes.',
                     style: theme.textTheme.bodyMedium?.copyWith(
                       color: Colors.white.withValues(alpha: 0.75),
                     ),
                   ),
-                ),
-                const SizedBox(height: 18),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.12),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Icon(
-                        Icons.location_on_rounded,
-                        size: 16,
-                        color: RotaryTheme.gold,
-                      ),
-                      const SizedBox(width: 6),
-                      Text(
-                        '$areaCount áreas',
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          color: Colors.white,
+                  const SizedBox(height: 18),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(
+                          Icons.location_on_rounded,
+                          size: 16,
+                          color: RotaryTheme.gold,
                         ),
-                      ),
-                    ],
+                        const SizedBox(width: 6),
+                        Text(
+                          '$areaCount áreas',
+                          style: theme.textTheme.labelLarge?.copyWith(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+            const SizedBox(width: 10),
+            const SizedBox.square(
+              dimension: 80,
+              child: RotaryWheelMark(size: 80, opacity: 0.36),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -344,6 +348,7 @@ class _AreaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final governor = area.assistantGovernor;
+    final isTeam = area.isDistrictTeam;
     return AppCard(
       onTap: onTap,
       padding: const EdgeInsets.all(14),
@@ -364,13 +369,19 @@ class _AreaCard extends StatelessWidget {
                 ],
               ),
             ),
-            child: Text(
-              area.number.toString().padLeft(2, '0'),
-              style: theme.textTheme.titleLarge?.copyWith(
-                color: RotaryTheme.gold,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
+            child: isTeam
+                ? const Icon(
+                    Icons.groups_rounded,
+                    color: RotaryTheme.gold,
+                    size: 28,
+                  )
+                : Text(
+                    area.number.toString().padLeft(2, '0'),
+                    style: theme.textTheme.titleLarge?.copyWith(
+                      color: RotaryTheme.gold,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
           ),
           const SizedBox(width: 14),
           Expanded(
@@ -381,7 +392,7 @@ class _AreaCard extends StatelessWidget {
                 if (governor != null && governor.trim().isNotEmpty) ...[
                   const SizedBox(height: 4),
                   Text(
-                    'Gov. Assistente',
+                    isTeam ? 'Distrito' : 'Gov. Assistente',
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: RotaryTheme.textMuted,
                     ),
